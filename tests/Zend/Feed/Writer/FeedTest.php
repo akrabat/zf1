@@ -40,12 +40,8 @@ class Zend_Feed_Writer_FeedTest extends PHPUnit_Framework_TestCase
     public function setup()
     {
         Zend_Locale_Data::disableCache(true);
+        Zend_Locale_Data::removeCache();
         $this->_feedSamplePath = dirname(__FILE__) . '/Writer/_files';
-    }
-
-    public function tearDown()
-    {
-        Zend_Locale_Data::clearCache();
     }
 
     public function testAddsAuthorName()

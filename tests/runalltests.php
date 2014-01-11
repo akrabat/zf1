@@ -44,7 +44,7 @@ if (!is_executable($PHPUNIT)) {
 }
 
 // locate all tests
-$files = glob('{Zend/*/AllTests.php,Zend/*Test.php}', GLOB_BRACE);
+$files = glob('{Zend/Feed/AllTests.php}', GLOB_BRACE);
 sort($files);
 
 // we'll capture the result of each phpunit execution in this value, so we'll know if something broke

@@ -43,6 +43,11 @@ class Zend_Feed_Writer_FeedTest extends PHPUnit_Framework_TestCase
         $this->_feedSamplePath = dirname(__FILE__) . '/Writer/_files';
     }
 
+    public function tearDown()
+    {
+        Zend_Locale_Data::clearCache();
+    }
+
     public function testAddsAuthorName()
     {
         $writer = new Zend_Feed_Writer_Feed;

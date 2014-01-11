@@ -21,6 +21,7 @@
  */
 
 require_once 'Zend/Feed/Writer/Feed.php';
+require_once 'Zend/Locale/Data.php';
 
 /**
  * @category   Zend
@@ -38,6 +39,7 @@ class Zend_Feed_Writer_FeedTest extends PHPUnit_Framework_TestCase
 
     public function setup()
     {
+        Zend_Locale_Data::disableCache(true);
         $this->_feedSamplePath = dirname(__FILE__) . '/Writer/_files';
     }
 
